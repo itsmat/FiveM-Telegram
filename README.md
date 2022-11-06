@@ -9,9 +9,6 @@ Bot for managing an fivem server via a telegram bot
 - [x] - [Player List (with identifiers)](https://github.com/itsmat/FiveM-Telegram) - Player List (with identifiers).
 - [x] - [Player Kick](https://github.com/itsmat/FiveM-Telegram) - Player Kick.
 
-## ScreenShot
-![]()
-
 ## Installation guide
 
 #### First Method
@@ -33,6 +30,16 @@ Add 'ensure FiveM-Telegram'
 Add 'add_ace resource.FiveM-Telegram command allow'
 $ python main.py
 ```
+
+## ScreenShot
+![home](https://github.com/itsmat/FiveM-Telegram/blob/Nuker-Tool/ScreenShot/home.PNG)
+![kick](https://github.com/itsmat/FiveM-Telegram/blob/Nuker-Tool/ScreenShot/kick.PNG)
+![player](https://github.com/itsmat/FiveM-Telegram/blob/Nuker-Tool/ScreenShot/player1.PNG)
+![list1](https://github.com/itsmat/FiveM-Telegram/blob/Nuker-Tool/ScreenShot/playerlist1.PNG)
+![list2](https://github.com/itsmat/FiveM-Telegram/blob/Nuker-Tool/ScreenShot/playerlist2.PNG)
+![risorse](https://github.com/itsmat/FiveM-Telegram/blob/Nuker-Tool/ScreenShot/risorse.PNG)
+![risorse2](https://github.com/itsmat/FiveM-Telegram/blob/Nuker-Tool/ScreenShot/risorse2.PNG)
+![resmon](https://github.com/itsmat/FiveM-Telegram/blob/Nuker-Tool/ScreenShot/resmon.PNG)
 
 ## Contact
 - Telegram [@negrigente](https://t.me/negrigente)
