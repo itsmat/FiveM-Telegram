@@ -16,6 +16,10 @@ Bot for managing an fivem server via a telegram bot
 
 #### First Method
 ```
+Put the FiveM-Telegram folder in the server resources folder
+Edit server.cfg
+Add 'ensure FiveM-Telegram'
+Add 'add_ace resource.FiveM-Telegram command allow'
 Start the setup.bat file.
 ```
 
@@ -23,6 +27,10 @@ Start the setup.bat file.
 ```
 $ git clone https://github.com/itsmat/FiveM-Telegram.git
 $ python -m pip install -r requirements.txt
+Put the FiveM-Telegram folder in the server resources folder
+Edit server.cfg
+Add 'ensure FiveM-Telegram'
+Add 'add_ace resource.FiveM-Telegram command allow'
 $ python main.py
 ```
 
