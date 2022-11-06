@@ -23,7 +23,7 @@ Start the setup.bat file.
 ```
 $ git clone https://github.com/itsmat/FiveM-Telegram.git
 $ python -m pip install -r requirements.txt
-$ python bot.py
+$ python main.py
 ```
 
 ## Contact
