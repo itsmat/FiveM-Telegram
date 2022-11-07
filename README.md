@@ -2,12 +2,15 @@
 Bot for managing an fivem server via a telegram bot
 
 ## Features and Updates
-#### 0.0.1
+#### 1.0.0
 - [x] - [Server Info](https://github.com/itsmat/FiveM-Telegram) - Server Info.
 - [x] - [Resources Management](https://github.com/itsmat/FiveM-Telegram) - Resources Management (stop, restart, start)
 - [x] - [Player List](https://github.com/itsmat/FiveM-Telegram) - Player List.
 - [x] - [Player List (with identifiers)](https://github.com/itsmat/FiveM-Telegram) - Player List (with identifiers).
 - [x] - [Player Kick](https://github.com/itsmat/FiveM-Telegram) - Player Kick.
+#### 1.0.1
+- [x] - [Version Check](https://github.com/itsmat/FiveM-Telegram) - Version Check
+
 
 ## Installation guide
 
