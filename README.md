@@ -43,6 +43,7 @@ $ python main.py
 ![risorse](https://github.com/itsmat/FiveM-Telegram/blob/Nuker-Tool/ScreenShot/risorse.PNG)
 ![risorse2](https://github.com/itsmat/FiveM-Telegram/blob/Nuker-Tool/ScreenShot/risorse2.PNG)
 ![resmon](https://github.com/itsmat/FiveM-Telegram/blob/Nuker-Tool/ScreenShot/resmon.PNG)
+![logs](https://github.com/itsmat/FiveM-Telegram/blob/Nuker-Tool/ScreenShot/logs.png)
 
 ## Contact
 - Telegram [@negrigente](https://t.me/negrigente)
