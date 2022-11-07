@@ -3,7 +3,7 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from pyrogram import Client, filters
 import requests
 from main import ip
-versione = '1.0'
+versione = '1.0.1'
 
 def fallo(cmd):
     print(cmd)
