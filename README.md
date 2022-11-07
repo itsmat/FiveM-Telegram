@@ -2,7 +2,7 @@
 Bot for managing an fivem server via a telegram bot
 
 ## Features and Updates
-#### 1.0.0
+#### 1.0.0 (06/11/2022)
 - [x] - [Server Info](https://github.com/itsmat/FiveM-Telegram) - Server Info.
 - [x] - [Resources Management](https://github.com/itsmat/FiveM-Telegram) - Resources Management (stop, restart, start)
 - [x] - [Player List](https://github.com/itsmat/FiveM-Telegram) - Player List.
