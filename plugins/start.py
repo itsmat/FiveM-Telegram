@@ -2,8 +2,11 @@ import json
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from pyrogram import Client, filters
 import requests
-from main import ip
-versione = '1.0.1'
+from discord_webhook import DiscordWebhook, DiscordEmbed
+from main import ip, log, logdiscordwebhook
+versione = '1.0.2'
+webhook = DiscordWebhook(url=logdiscordwebhook)
+
 
 def fallo(cmd):
     print(cmd)
@@ -58,6 +61,16 @@ Server Build: <code>{controllobuild()}</code>''', reply_markup=InlineKeyboardMar
                         [InlineKeyboardButton(text="🧑‍💻 Source Code 🧑‍💻", url='https://github.com/itsmat')],
                     ]
                 ))
+    if log == True:
+        try:
+            embed = DiscordEmbed(title='Avvio Bot', description=f'''Utente: {message.from_user.first_name} 
+ID: `{message.from_user.id}`
+UserName: @{message.from_user.username}''', color='03b2f8')
+            webhook.add_embed(embed)
+            invio = webhook.execute()
+        except Exception as errorewebhook:
+            print(f'''[Errore] Errore durante l'invio del webhook. {errorewebhook}''')
+
 
 @Client.on_callback_query(filters.regex("startcb"))
 async def startcb(client, query):
@@ -84,6 +97,18 @@ async def espellicmd(client, message):
     motivo = " ".join(message.command[2:])
     fallo(f"clientkick {utente} [FiveM-Telegram] Motivo: {motivo} Da: {message.from_user.first_name}")
     await message.reply(f'ID:{utente} kickato')
+    
+    if log == True:
+        try:
+            embed = DiscordEmbed(title='🚨 Kick Utente', description=f'''Staffer: {message.from_user.first_name} 
+ID: `{message.from_user.id}`
+UserName: @{message.from_user.username}
+Utente Kickato: `{utente}`
+Motivo: {motivo}''', color='03b2f8')
+            webhook.add_embed(embed)
+            invio = webhook.execute()
+        except Exception as errorewebhook:
+            print(f'''[Errore] Errore durante l'invio del webhook. {errorewebhook}''')
 
 @Client.on_callback_query(filters.regex("gestiscirisorsehome"))
 async def gestiscirisorsehome(client, query):
@@ -166,6 +191,17 @@ async def cbstop(client, query):
     await query.answer("🔄 Caricamento") 
     fallo(f"stop {resource[0]}")
     await query.message.edit(f'**❌ Risorsa **<code>{resource[0]}</code> **stoppata**')
+    if log == True:
+        try:
+            message = query
+            embed = DiscordEmbed(title='❌ Risorsa Stoppata', description=f'''Staffer: {message.from_user.first_name} 
+ID: `{message.from_user.id}`
+UserName: @{message.from_user.username}
+Risorsa: `{resource[0]}`''', color='03b2f8')
+            webhook.add_embed(embed)
+            invio = webhook.execute()
+        except Exception as errorewebhook:
+            print(f'''[Errore] Errore durante l'invio del webhook. {errorewebhook}''')
 
 @Client.on_callback_query(filters.regex("refresh"))
 async def cbrefresh(client, query):
@@ -180,6 +216,17 @@ async def cbrestart(client, query):
     await query.answer("🔄 Caricamento") 
     fallo(f"restart {resource[0]}")
     await query.message.edit(f'**🔄 Risorsa **<code>{resource[0]}</code> **restartata**')
+    if log == True:
+        try:
+            message = query
+            embed = DiscordEmbed(title='🔄 Risorsa Riavviata', description=f'''Staffer: {message.from_user.first_name} 
+ID: `{message.from_user.id}`
+UserName: @{message.from_user.username}
+Risorsa: `{resource[0]}`''', color='03b2f8')
+            webhook.add_embed(embed)
+            invio = webhook.execute()
+        except Exception as errorewebhook:
+            print(f'''[Errore] Errore durante l'invio del webhook. {errorewebhook}''')
 
 @Client.on_callback_query(filters.regex("avvia"))
 async def cbavvia(client, query):
@@ -187,6 +234,17 @@ async def cbavvia(client, query):
     await query.answer("🔄 Caricamento") 
     fallo(f"start {resource[0]}")
     await query.message.edit(f'**✅ Risorsa **<code>{resource[0]}</code> **startata**')
+    if log == True:
+        try:
+            message = query
+            embed = DiscordEmbed(title='✅ Risorsa Avviata', description=f'''Staffer: {message.from_user.first_name} 
+ID: `{message.from_user.id}`
+UserName: @{message.from_user.username}
+Risorsa: `{resource[0]}`''', color='03b2f8')
+            webhook.add_embed(embed)
+            invio = webhook.execute()
+        except Exception as errorewebhook:
+            print(f'''[Errore] Errore durante l'invio del webhook. {errorewebhook}''')
 
 
 @Client.on_message(filters.command("avviarisorsa") & filters.private)
@@ -194,9 +252,29 @@ async def cmdavviarisorsa(client, message):
     resource = message.command[1] 
     fallo(f"start {resource}")
     await message.reply(f'Risorsa {resource} avviata')
+    if log == True:
+        try:
+            embed = DiscordEmbed(title='✅ Risorsa Avviata', description=f'''Staffer: {message.from_user.first_name} 
+ID: `{message.from_user.id}`
+UserName: @{message.from_user.username}
+Risorsa: `{resource[0]}`''', color='03b2f8')
+            webhook.add_embed(embed)
+            invio = webhook.execute()
+        except Exception as errorewebhook:
+            print(f'''[Errore] Errore durante l'invio del webhook. {errorewebhook}''')
 
 @Client.on_message(filters.command("stoprisorsa") & filters.private)
 async def cmdrisorsastop(client, message):
     resource = message.command[1] 
     fallo(f"stop {resource}")
     await message.reply(f'Risorsa {resource} stoppata')
+    if log == True:
+        try:
+            embed = DiscordEmbed(title='❌ Risorsa Stoppata', description=f'''Staffer: {message.from_user.first_name} 
+ID: `{message.from_user.id}`
+UserName: @{message.from_user.username}
+Risorsa: `{resource[0]}`''', color='03b2f8')
+            webhook.add_embed(embed)
+            invio = webhook.execute()
+        except Exception as errorewebhook:
+            print(f'''[Errore] Errore durante l'invio del webhook. {errorewebhook}''')
