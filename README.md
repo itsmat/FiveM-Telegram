@@ -9,7 +9,7 @@ Bot for managing an fivem server via a telegram bot
 - [x] - [Player List (with identifiers)](https://github.com/itsmat/FiveM-Telegram) - Player List (with identifiers).
 - [x] - [Player Kick](https://github.com/itsmat/FiveM-Telegram) - Player Kick.
 #### 1.0.1
-- [x] - [Version Check](https://github.com/itsmat/FiveM-Telegram) - Version Check
+- [x] - [Version Check](https://github.com/itsmat/FiveM-Telegram) - Version Check [screenshot](https://cdn.discordapp.com/attachments/1035898991893811212/1039179353470292108/image.png)
 
 
 ## Installation guide
